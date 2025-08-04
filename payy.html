@@ -1,0 +1,142 @@
+<!DOCTYPE html><html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Payment Zuroku</title>
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+    body {
+      background: #092B36;
+      color: #fff;
+    }
+    header {
+      background: #03E0F4;
+      padding: 20px 10%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header h1 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 28px;
+      color: #092B36;
+    }
+    .container {
+      padding: 40px 10%;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: #0f3a47;
+      border-radius: 15px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+    .card img {
+      width: 70px;
+      margin-bottom: 10px;
+    }
+    .card h3 {
+      margin: 10px 0;
+      color: #03E0F4;
+      font-size: 22px;
+    }
+    .card p {
+      background: #03313c;
+      padding: 12px;
+      border-radius: 10px;
+      margin: 10px 0;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+    .btn-copy, .btn-download {
+      padding: 10px 20px;
+      background: #00e1ff;
+      color: #000;
+      border: none;
+      border-radius: 30px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .btn-copy:hover, .btn-download:hover {
+      background: #02c7dc;
+    }
+    .qris-img {
+      width: 100%;
+      border-radius: 10px;
+      margin: 10px 0;
+    }
+    .contact {
+      text-align: center;
+      margin: 20px 0 30px;
+    }
+    .contact a {
+      margin: 10px;
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 30px;
+      font-weight: bold;
+      color: white;
+    }
+    .contact .wa { background: #8D1414; }
+    .contact .tg { background: #8D1414; }
+    footer {
+      background: #000;
+      text-align: center;
+      padding: 20px;
+      color: #999;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Payment Zuroku</h1>
+  </header>  <section class="container">
+    <div class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Logo_dana_blue.svg" alt="Dana">
+      <h3>Dana</h3>
+      <p id="dana">Belom Ada</p>
+      <button class="btn-copy" onclick="copyText('Belom Ada')">Salin Nomor</button>
+    </div>
+    <div class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/4/4f/Logo_OVO_purple.svg" alt="OVO">
+      <h3>OVO</h3>
+      <p id="ovo">Belom Ada</p>
+      <button class="btn-copy" onclick="copyText('Belom Ada')">Salin Nomor</button>
+    </div>
+    <div class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/f/fd/Gopay_logo.svg" alt="Gopay">
+      <h3>Gopay</h3>
+      <p id="gopay">Belom Ada</p>
+      <button class="btn-copy" onclick="copyText('Belom Ada')">Salin Nomor</button>
+    </div>
+    <div class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/3/3b/Qris_logo.png" alt="QRIS">
+      <h3>QRIS</h3>
+      <img src="https://telegra.ph/file/f2749054a26962d61b14f.png" alt="QRIS Code" class="qris-img">
+      <button class="btn-download" onclick="window.open('https://telegra.ph/file/f2749054a26962d61b14f.png')">Download QRIS</button>
+    </div>
+  </section>  <div class="contact">
+    <h3 style="margin-bottom: 10px;">Contact Saya</h3>
+    <a href="https://wa.me/6285727198100" class="wa">WhatsApp</a>
+    <a href="https://t.me/username" class="tg">Telegram</a>
+  </div>  <footer>
+    <p>© 2025 Rafael Aidil Suniztian</p>
+  </footer>  <script>
+    function copyText(text) {
+      navigator.clipboard.writeText(text).then(() => {
+        alert("Nomor berhasil disalin: " + text);
+      });
+    }
+  </script></body>
+</html>
